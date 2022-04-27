@@ -11,38 +11,37 @@ import javax.persistence.*;
  *
  * @author Gabriel
  */
-
 @Entity
 @Table(name = "cliente")
 public class Cliente implements Serializable {
-    
+
     private static final long serialVersionUID = 1L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column(nullable = false, length = 120)
     private String nome;
-    
+
     @Column(nullable = false, length = 120, unique = true)
     private String email;
-    
+
     @Column(nullable = false, length = 14, unique = true)
     private String cpf;
-    
-    @Column (nullable = false, length = 10, unique = true)
+
+    @Column(nullable = false, length = 10, unique = true)
     private String rg;
 
     public Cliente() {
-    }    
-    
+    }
+
     public Cliente(Long id, String nome, String email, String cpf, String rg) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.rg = rg;
-    }    
+    }
 
     public Long getId() {
         return id;
@@ -82,9 +81,8 @@ public class Cliente implements Serializable {
 
     public void setRg(String rg) {
         this.rg = rg;
-    }   
-       
-    
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -106,6 +104,5 @@ public class Cliente implements Serializable {
     public String toString() {
         return "br.com.senac.entidade.Cliente[ id=" + id + " ]";
     }
-    
-}
 
+}

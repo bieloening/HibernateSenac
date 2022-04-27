@@ -9,7 +9,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 /**
  *
- * @author silvio.junior
+ * @author Gabriel
  */
 @Entity
 @Table(name = "usuario")

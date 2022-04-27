@@ -7,7 +7,7 @@ package br.com.senac.util;
 
 /**
  *
- * @author silvio.junior
+ * @author Gabriel
  */
 public class GeradorUtil {
 
